@@ -1,7 +1,7 @@
 name: password_strength_indicator_plus
 description: This Flutter plugin offers a password strength indicator widget with 5 seperate conditions.
 version: 0.0.1
-homepage:
+homepage: https://github.com/nishalsehan/password_strength_indicator_plus
 
 environment:
   sdk: '>=2.18.0 <4.0.0'

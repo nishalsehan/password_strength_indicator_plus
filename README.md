@@ -54,7 +54,7 @@ PasswordStrengthIndicatorPlus(
 
 ## Customization
 
-You can customize the password validation widget by providing different parameters to the `PasswordStrengthIndicatorPlus` constructor:
+You can customize the password strength indicator widget by providing different parameters to the `PasswordStrengthIndicatorPlus` constructor:
 
 ```dart
 PasswordStrengthIndicatorPlus(

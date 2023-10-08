@@ -30,19 +30,19 @@ class PasswordStrengthIndicatorPlus extends StatefulWidget {
 
 class PasswordStrengthIndicatorPlusState extends State<PasswordStrengthIndicatorPlus> {
   RegExp numReg = RegExp(
-      r".*[0-9].*"); //use to find password text contains at least one digit
+      r".*[0-9].*"); ///use to find password text contains at least one digit
   RegExp simpleReg = RegExp(
-      r".*[a-z].*"); //use to find password text contains at least one simple letter
+      r".*[a-z].*"); ///use to find password text contains at least one simple letter
   RegExp capitalReg = RegExp(
-      r".*[A-Z].*"); //use to find password text contains at least one CAPITAL letter
+      r".*[A-Z].*"); ///use to find password text contains at least one CAPITAL letter
   RegExp symbolsReg = RegExp(
-      r'.*[!@#\$&*~].*'); //use to find password text contains at least one symbol (!, @, #, \, $, &, *, ~)
-  double _strength = 0;
+      r'.*[!@#\$&*~].*'); ///use to find password text contains at least one symbol (!, @, #, \, $, &, *, ~)
+  double _strength = 0; ///initialize the strength as 0
 
   @override
   void initState() {
     super.initState();
-    //add a listener to listen on password field changes
+    ///add a listener to listen on password field changes
     widget.textController.addListener(calculateStrength);
   }
 
@@ -54,7 +54,7 @@ class PasswordStrengthIndicatorPlusState extends State<PasswordStrengthIndicator
       child: Column(
         children: [
           SizedBox(height: size.height * 0.005),
-          //show the progress of the password strength
+          ///show the progress of the password strength
           LinearProgressIndicator(
             value: _strength,
             backgroundColor: Colors.grey[300],
@@ -69,7 +69,7 @@ class PasswordStrengthIndicatorPlusState extends State<PasswordStrengthIndicator
                 : Colors.green,
             minHeight: 5,
           ),
-          if (!widget.hideRules)
+          if (!widget.hideRules) ///hide the rules if widget.hideRules status is true
             Column(
               children: [
                 SizedBox(height: size.height * 0.015),
@@ -97,7 +97,7 @@ class PasswordStrengthIndicatorPlusState extends State<PasswordStrengthIndicator
     );
   }
 
-  //calculate the password strength base on 5 conditions
+  ///calculate the password strength base on 5 conditions
   calculateStrength() {
     double total = 0;
     if (checkLength()) {
@@ -120,6 +120,7 @@ class PasswordStrengthIndicatorPlusState extends State<PasswordStrengthIndicator
     });
   }
 
+  ///rule widget:  this shows the status of the rule validation and the rule text
   Widget conditionText(bool condition, String text) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
