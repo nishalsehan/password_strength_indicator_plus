@@ -14,34 +14,43 @@ class PasswordStrengthIndicatorPlus extends StatefulWidget {
   final bool hideRules;
   const PasswordStrengthIndicatorPlus(
       {super.key,
-        required this.textController,
-        this.maxLength,
-        this.minLength = 8,
-        this.successIcon,
-        this.unSuccessIcon,
-        this.successWidget,
-        this.unSuccessWidget,
-        this.textSize = 14,
-        this.hideRules = false});
+      required this.textController,
+      this.maxLength,
+      this.minLength = 8,
+      this.successIcon,
+      this.unSuccessIcon,
+      this.successWidget,
+      this.unSuccessWidget,
+      this.textSize = 14,
+      this.hideRules = false});
 
   @override
-  State<PasswordStrengthIndicatorPlus> createState() => PasswordStrengthIndicatorPlusState();
+  State<PasswordStrengthIndicatorPlus> createState() =>
+      PasswordStrengthIndicatorPlusState();
 }
 
-class PasswordStrengthIndicatorPlusState extends State<PasswordStrengthIndicatorPlus> {
-  RegExp numReg = RegExp(
-      r".*[0-9].*"); ///use to find password text contains at least one digit
-  RegExp simpleReg = RegExp(
-      r".*[a-z].*"); ///use to find password text contains at least one simple letter
-  RegExp capitalReg = RegExp(
-      r".*[A-Z].*"); ///use to find password text contains at least one CAPITAL letter
-  RegExp symbolsReg = RegExp(
-      r'.*[!@#\$&*~].*'); ///use to find password text contains at least one symbol (!, @, #, \, $, &, *, ~)
-  double _strength = 0; ///initialize the strength as 0
+class PasswordStrengthIndicatorPlusState
+    extends State<PasswordStrengthIndicatorPlus> {
+  RegExp numReg = RegExp(r".*[0-9].*");
+
+  ///use to find password text contains at least one digit
+  RegExp simpleReg = RegExp(r".*[a-z].*");
+
+  ///use to find password text contains at least one simple letter
+  RegExp capitalReg = RegExp(r".*[A-Z].*");
+
+  ///use to find password text contains at least one CAPITAL letter
+  RegExp symbolsReg = RegExp(r'.*[!@#\$&*~].*');
+
+  ///use to find password text contains at least one symbol (!, @, #, \, $, &, *, ~)
+  double _strength = 0;
+
+  ///initialize the strength as 0
 
   @override
   void initState() {
     super.initState();
+
     ///add a listener to listen on password field changes
     widget.textController.addListener(calculateStrength);
   }
@@ -54,6 +63,7 @@ class PasswordStrengthIndicatorPlusState extends State<PasswordStrengthIndicator
       child: Column(
         children: [
           SizedBox(height: size.height * 0.005),
+
           ///show the progress of the password strength
           LinearProgressIndicator(
             value: _strength,
@@ -61,15 +71,17 @@ class PasswordStrengthIndicatorPlusState extends State<PasswordStrengthIndicator
             color: _strength <= 0.2
                 ? Colors.red
                 : _strength == 0.4
-                ? Colors.yellow
-                : _strength == 0.6000000000000001
-                ? Colors.amber
-                : _strength == 0.8
-                ? Colors.orange
-                : Colors.green,
+                    ? Colors.yellow
+                    : _strength == 0.6000000000000001
+                        ? Colors.amber
+                        : _strength == 0.8
+                            ? Colors.orange
+                            : Colors.green,
             minHeight: 5,
           ),
-          if (!widget.hideRules) ///hide the rules if widget.hideRules status is true
+          if (!widget.hideRules)
+
+            ///hide the rules if widget.hideRules status is true
             Column(
               children: [
                 SizedBox(height: size.height * 0.015),
@@ -129,17 +141,17 @@ class PasswordStrengthIndicatorPlusState extends State<PasswordStrengthIndicator
           alignment: Alignment.centerLeft,
           child: condition
               ? widget.successWidget ??
-              Icon(
-                widget.successIcon ?? Icons.check,
-                color: Colors.green,
-                size: 14,
-              )
+                  Icon(
+                    widget.successIcon ?? Icons.check,
+                    color: Colors.green,
+                    size: 14,
+                  )
               : widget.unSuccessWidget ??
-              Icon(
-                widget.unSuccessIcon ?? Icons.clear,
-                color: Colors.red,
-                size: 14,
-              ),
+                  Icon(
+                    widget.unSuccessIcon ?? Icons.clear,
+                    color: Colors.red,
+                    size: 14,
+                  ),
         ),
         const SizedBox(width: 12),
         SizedBox(
