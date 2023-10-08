@@ -2,7 +2,8 @@
 
 A Flutter plugin that offers a password strength indicator widget to ensure strong password requirements in your Flutter applications. The widget enforces 5 crucial rules for password strength, accompanied by a visual progress indicator to guide users in creating secure passwords.
 
-![password_strength_indicator_plus_screenshot_1]()
+![password_strength_indicator_plus_screenshot_1](https://github.com/nishalsehan/password_strength_indicator_plus/assets/44578204/359aeed6-2b9b-4517-8c0f-a3b31638f47a)
+
 
 ## Features
 
@@ -19,7 +20,7 @@ A Flutter plugin that offers a password strength indicator widget to ensure stro
 
 - **Customization**: Easily customize the password validation rules and the appearance of the widget to match your application's requirements.
 
-![password_strength_indicator_plus Demo](https://github.com/nishalsehan/password_validation_plus/assets/44578204/69cc3675-98c5-46fd-9517-d6fd8e1f4827)
+![password_strength_indicator_plus Demo](https://github.com/nishalsehan/password_strength_indicator_plus/assets/44578204/a6a8010b-fe19-4675-a374-e55d811efa34)
 
 ## Installation
 
