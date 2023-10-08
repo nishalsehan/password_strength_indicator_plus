@@ -89,14 +89,14 @@ PasswordStrengthIndicatorPlus(
 
 ## Example
 
-For a complete example of how to use this plugin, check out the [example](https://github.com/nishalsehan/password_validation_plus/tree/main/example) folder in this repository.
+For a complete example of how to use this plugin, check out the [example](https://github.com/nishalsehan/password_strength_indicator_plus/tree/main/example) folder in this repository.
 </br>
 
 ## Issues and Feedback
 
-If you encounter any issues or have suggestions for improvement, please open an issue on our [GitHub repository](https://github.com/nishalsehan/password_validation_plus/issues). We welcome your feedback!
+If you encounter any issues or have suggestions for improvement, please open an issue on our [GitHub repository](https://github.com/nishalsehan/password_strength_indicator_plus/issues). We welcome your feedback!
 </br>
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/nishalsehan/password_validation_plus/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/nishalsehan/password_strength_indicator_plus/blob/main/LICENSE) file for details.
